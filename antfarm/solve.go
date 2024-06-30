@@ -24,9 +24,9 @@ func StartTurnBasedSolving(field *Field, pathsToExit [][]string) []string {
 				}
 
 				if nextRoom != "" {
-					turnStruct := "%s L%v-%s"
+					turnStruct := "%s L%d-%s"
 					if turn == "" {
-						turnStruct = "%sL%v-%s"
+						turnStruct = "%sL%d-%s"
 					}
 
 					pathsUsed = append(pathsUsed, ant.currentRoom+"-"+nextRoom)
@@ -45,7 +45,6 @@ func StartTurnBasedSolving(field *Field, pathsToExit [][]string) []string {
 
 	return movements
 }
-
 func getNextRoom(currentRoom string, pathsToExit [][]string, usedPaths []string, field Field) string {
 	for _, pathToExit := range pathsToExit {
 		for i, room := range pathToExit {

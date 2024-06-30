@@ -98,7 +98,7 @@ func numberToAnts(numberOfAnts int, field *Field) error {
 		return fmt.Errorf("invalid number of ants")
 	}
 
-	for i := 0; i < numberOfAnts; i++ {
+	for i := 1; i <= numberOfAnts; i++ {
 		ant := Ant{id: i, isFinished: false}
 		field.ants = append(field.ants, &ant)
 	}
