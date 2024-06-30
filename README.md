@@ -90,4 +90,4 @@ Potential areas for enhancement include:
 - Enhancing the visualization with more interactive features
 
 ## Contributors
-Nezar Jaberi & Abdulaziz Rajab
+Nezar Jaberi &  Abdul Aziz Bin Rajab 
