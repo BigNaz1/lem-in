@@ -19,6 +19,22 @@ func main() {
 		return
 	}
 
+	// Check for multiple start or end points
+	startCount,endCount := 0, 0
+	for _,line := range lines{
+		if line == "##start"{
+			startCount++
+		}
+		if line == "##end"{
+			endCount++
+		}
+	}
+	
+	if startCount > 1 || endCount > 1{
+		fmt.Println("Error: You cannot have more than one starting or ending point")
+		return
+	}
+
 	// Print input
 	for _, line := range lines {
 		fmt.Println(line)
